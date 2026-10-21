@@ -1,12 +1,12 @@
 <?php
-// Database settings (same values as the Java DatabaseConnection class)
+
 define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
 define('DB_NAME', 'cabinet_medical');
 define('DB_USER', 'root');
 define('DB_PASS', 'Hknadir11@');
 
-// Clinic details used on printed documents (from PrintUtils.java)
+
 define('CLINIC_NAME', 'CABINET MEDICAL');
 define('CLINIC_ADDRESS', 'Filfila, Skikda');
 define('CLINIC_PHONE', '0548896435');

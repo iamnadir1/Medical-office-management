@@ -1,0 +1,12 @@
+
+
+.env
+config/secrets.php
+
+
+sessions/*
+!sessions/.gitkeep
+
+
+.vscode/
+.DS_Store

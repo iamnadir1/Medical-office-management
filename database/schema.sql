@@ -1,4 +1,4 @@
--- Cabinet Medical - MySQL schema (migrated from the Swing app)
+
 CREATE DATABASE IF NOT EXISTS cabinet_medical CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE cabinet_medical;
 
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS utilisateur(
   nom VARCHAR(50) NOT NULL,
   prenom VARCHAR(50) NOT NULL,
   login VARCHAR(50) UNIQUE NOT NULL,
-  mot_de_passe VARCHAR(255) NOT NULL,   -- bcrypt hash (plain text is auto-upgraded at first login)
+  mot_de_passe VARCHAR(255) NOT NULL,   
   role VARCHAR(15) NOT NULL DEFAULT 'secretary'  -- admin | doctor | secretary
 );
 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS medicament(
   forme VARCHAR(50)
 );
 
--- patient must exist before rendezvous (fixed order from the original script)
+
 CREATE TABLE IF NOT EXISTS patient(
   id_patient INT PRIMARY KEY AUTO_INCREMENT,
   nom VARCHAR(50) NOT NULL,

@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile sidebar
+  
   const sb = document.getElementById('sidebar'), mt = document.getElementById('menuToggle');
   if (mt) mt.addEventListener('click', () => sb.classList.toggle('open'));
 
-  // ---- Modals ----
+  
   const openModal = m => { m.classList.add('open'); const f = m.querySelector('input:not([type=hidden]),select,textarea'); if (f) setTimeout(() => f.focus(), 50); };
   const closeModal = m => m.classList.remove('open');
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal.open').forEach(closeModal); });
 
-  // ---- Live table filter ----
+  
   document.querySelectorAll('[data-filter]').forEach(inp => {
     const table = document.getElementById(inp.dataset.filter);
     inp.addEventListener('input', () => {
@@ -42,15 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ---- Delete confirmation ----
+  
   document.querySelectorAll('form[data-confirm]').forEach(f => f.addEventListener('submit', e => {
     if (!confirm(f.dataset.confirm)) e.preventDefault();
   }));
 
-  // ---- Flash auto-hide ----
+  
   document.querySelectorAll('.alert-success').forEach(a => setTimeout(() => { a.style.opacity = 0; setTimeout(() => a.remove(), 500); }, 4000));
 
-  // ---- Prescription medicine rows ----
+  
   const rows = document.getElementById('medRows');
   if (rows) {
     const tpl = document.getElementById('medRowTpl');
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     add();
   }
 
-  // ---- Consultation: auto-select patient when an appointment is chosen ----
+  
   const rdvSel = document.getElementById('rdvSelect'), patSel = document.getElementById('consPatient');
   if (rdvSel && patSel) rdvSel.addEventListener('change', () => {
     const o = rdvSel.selectedOptions[0]; if (o && o.dataset.patient) patSel.value = o.dataset.patient;

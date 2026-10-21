@@ -231,17 +231,7 @@ The web application was developed from a desktop project that I originally built
 
 This project demonstrates experience with both desktop and web application development, relational database integration, and adapting an existing application's functionality to a different technology stack.
 
-## 9. Possible Improvements
 
-- Editing existing prescriptions and certificates
-- More granular permissions for doctors and secretaries
-- Calendar view for appointments
-- Dashboard statistics and charts
-- Password reset functionality
-- Pagination for long lists
 
-## Author
 
-**[Your Name]**
 
-Add screenshots of the dashboard, patient management, appointments, and printable documents to help visitors understand the application quickly.
